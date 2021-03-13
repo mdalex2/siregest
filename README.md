@@ -1,2 +1,2 @@
-# siregest
+# SIREGEST
 Sistema de registros estudiantiles

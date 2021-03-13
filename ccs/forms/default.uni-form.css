@@ -1,0 +1,226 @@
+/* ------------------------------------------------------------------------------
+   
+   UNI-FORM DEFAULT by DRAGAN BABIC                         (v2) | Wed, 31 Mar 10
+   
+   ------------------------------------------------------------------------------
+   
+   Copyright (c) 2010, Dragan Babic
+   
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use,
+   copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following
+   conditions:
+   
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+   OTHER DEALINGS IN THE SOFTWARE.
+   
+   ------------------------------------------------------------------------------ */
+
+.uniForm{ font:"Lucida Console", Monaco, monospace;
+background-image:url(../../assets/input.png);
+background-repeat:repeat-y;
+}
+a:link,
+a:visited{ text-decoration: none; color: #254a86; }
+a:hover,
+a:focus  { text-decoration: underline; }
+
+    legend{ font-weight: bold; font-size: 100%; margin: 0; padding: 0.2em 0; }
+  
+    .ctrlHolder{ padding:.4em;border-bottom: 0px solid #efefef; margin:0 0 0 0; color:#FFF;}
+	    /* Clear all floats */ 
+    .uniForm:after,
+      .buttonHolder:after, 
+      .ctrlHolder:after, 
+        .ctrlHolder .multiField:after,
+          .inlineLabel:after{ content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+      
+      label,
+      button{ cursor: pointer; }
+
+/* ------------------------------------------------------------------------------ */
+/* ##########################   DEFAULT LAYOUT   ################################ */
+
+	/*fondo al enfocar*/
+    .ctrlHolder.focused{ 
+		padding:.4em; 
+		/*background-image:url(../../assets/left_nav_bg_v.png);
+		background-repeat:repeat-x; */
+		border-bottom:0px solid #efefef; 
+		border-radius:7px;margin:0 0 0 0; }
+
+    .inlineLabels .noLabel{}
+    
+    .buttonHolder{ background: #efefef; text-align: right; margin: 1.5em 0 0 0; padding: 1em;
+                            /* CSS3 */
+                            border-radius:         4px;
+                            -webkit-border-radius: 4px;
+                            -moz-border-radius:    4px;
+                            -o-border-radius:      4px;
+                            -khtml-border-radius:  4px;
+                          }
+      .buttonHolder .primaryAction{ padding: 5px 11px; line-height: 1; background: #254a86; border: 1px solid #163362; font-size: 12px; font-weight: bold; color: #fff; 
+                                             /* CSS3 */
+                                             border-radius:         4px;
+                                             -webkit-border-radius: 4px;
+                                             -moz-border-radius:    4px;
+                                             -o-border-radius:      4px;
+                                             -khtml-border-radius:  4px;
+                                             box-shadow: 1px 1px 0 #fff;
+                                             -webkit-box-shadow: 1px 1px 0 #fff;
+                                             -moz-box-shadow: 1px 1px 0 #fff;
+                                             text-shadow: -1px -1px 0 rgba(0,0,0,.25);
+                                           }
+      .buttonHolder .primaryAction:active{ position: relative; top: 1px; color:#FFF }
+      .secondaryAction            { text-align: left;}
+      button.secondaryAction      { background: transparent; border: none; color:#000; margin: 0em 0 0 0; padding: 0; }
+	  
+	  label {
+      	margin-bottom:3px;
+	  }
+        .inlineLabels label em,
+        .inlineLabels .label em{ font-style: normal; font-weight: bold; padding: 3px 1px; margin:0px;  }
+        label small{ font-size: .75em; color: #777; }
+        
+      input[type=text],input[type=password],
+      textarea    {padding: 3px 1px; border: 1px solid #aaa; background: #fff; border-radius:0px; color:#333; margin-right:5px; 
+	 }
+	  .textarea_small { height: 5em; width:100%;} /*tamaño grande textarea*/
+		.textarea_large { height: 15em; width:100%;} /*tamaño grande textarea*/
+		
+		
+      select      {}
+      .fileUpload {}
+      
+      ul{margin:0;}
+        li{margin:0;}
+          ul li label{ font-size: .85em; margin:0; }
+            
+            .small {}
+            .medium{}
+            .large {} /* Large is default and should match the value you set for .textInput, textarea or select */
+            .auto  {}
+            .small,
+            .medium,
+            .auto{}
+/*tamaño de las cajas de texto*/
+      .sf {width: 120px !important; }
+			.mf {width: 240px; }
+			.lf {width: 360px; }
+			.lfX {width: 460px; }
+      
+      /* Get rid of the 'glow' effect in WebKit, optional */
+      .ctrlHolder .textInput:focus{
+		  padding: 3px 1px; border: 1px solid #aaa;
+		  border-radius:0px;
+	    background-image:url(../../wideadmin_files/input_bg.gif);
+	    background-repeat:repeat-x;
+ }
+      
+      .formHint                    { font-size: .85em; color: #777; margin:0px; }
+      .inlineLabels .formHint      { padding-top: .3em; }
+      .ctrlHolder.focused .formHint{ color: #333; }
+      
+/* ----------------------------------------------------------------------------- */
+/* ############################### Messages #################################### */
+/* ----------------------------------------------------------------------------- */
+
+  /* Error message at the top of the form #ffdfdf*/
+  #errorMsg{ background: #ffdfdf; border: 1px solid #f3afb5; margin: 0 0 1.5em 0; padding: 0 .3em;
+                      /* CSS3 */
+                      border-radius:         4px;
+                      -webkit-border-radius: 4px;
+                      -moz-border-radius:    4px;
+                      -o-border-radius:      4px;
+                      -khtml-border-radius:  4px;
+                    }
+    #errorMsg h3{} /* Feel free to use a heading level suitable to your page structure */
+    #errorMsg ol{ margin: 0 0 1.5em 0; padding: 0; }
+      #errorMsg ol li{ margin: 0 0 3px 1.5em; padding: .3px; background: #f6bec1; position: relative; font-size: .85em;
+                                /* CSS3 */
+                                border-radius:         4px;
+                                -webkit-border-radius: 4px;
+                                -moz-border-radius:    4px;
+                                -o-border-radius:      4px;
+                                -khtml-border-radius:  4px;
+                              }
+  /*error al perder el enfoque */
+  .ctrlHolder.error,
+  .ctrlHolder.focused.error{ 
+                                      /* CSS3 */
+									  background:#fff;
+									  border-color:#FFF;
+                                      border-radius:4px;
+                                      -webkit-border-radius: 4px;
+                                      -moz-border-radius:4px;
+                                      -o-border-radius:4px;
+                                      -khtml-border-radius:4px;
+                                    }
+    .ctrlHolder.error input.error,
+    .ctrlHolder.error select.error,
+    .ctrlHolder.error textarea.error{ color: #af4c4c; margin: 0 0 0 0; padding: 3px; margin-right:5px;}
+
+  /* Success messages at the top of the form */
+  #okMsg{ background: #c8ffbf; border: 1px solid #a2ef95; margin: 0 0 0 0; padding: 3px; text-align: center;
+                   /* CSS3 */
+                   border-radius:         4px;
+                   -webkit-border-radius: 4px;
+                   -moz-border-radius:    4px;
+                   -o-border-radius:      4px;
+                   -khtml-border-radius:  4px;
+                 }
+    #okMsg p{ margin: 0; }
+
+/* ----------------------------------------------------------------------------- */
+/* ############################### Columns ##################################### */
+/* ----------------------------------------------------------------------------- */
+
+    .col{}
+    .col.first{}
+    .col.last{}
+    .col{ margin-bottom: 0em; }
+    /* Use .first and .last classes to control the layout/spacing of your columns */
+    .col.first{ width: 49%; float: left; clear: none;                   }
+    .col.last { width: 49%; float: right; clear: none; margin-right: 0; }
+	
+		
+	/*alexi no quitar*/
+	
+	/* Additions for validation */
+ .valid input[type=text],
+ .valid input[type=password],
+ .valid textarea {
+background-repeat:no-repeat;
+background-position:right;
+background-image:url(../../images/icns_mensajeria/ok_16.png);
+color:#000;
+background-size:16px;
+margin-right:5px;
+}
+
+ .invalid input[type=text],
+ .invalid input[type=password],
+ .invalid textarea {
+background-repeat:no-repeat;
+background-position:right;
+background-image:url(../../images/icns_mensajeria/x16_3.png);
+background-size:16px;
+}
+
+/*color rojo en letras pequeÃ±itas de ifnormaciÃ³n al perder el enfoque con error*/
+.ctrlHolder.error p{color:#F00;
+font:bold;
+}

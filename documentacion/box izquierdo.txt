@@ -1,0 +1,10 @@
+		<!--BOX COMANDOS............................................................. -->
+                    <br><h3>Menú rápido</h3>
+                    <div class="box ui-widget ui-widget-content ui-corner-all portlet ui-helper-clearfix">
+						<div class="portlet-header ui-widget-header ui-corner-all">
+                           Seleccione una opci&oacute;n:
+                  </div> 
+						<!--fin de portlet header-->
+					  		<div class="portlet-content">aqui van las
+							opciones rapidas de el menu acciones usadas recientemente</div> <!--fin de portlet content-->
+				  	</div><!--FIN BOX COMANDOS otro boxxx............................................................. -->	

@@ -1,0 +1,6 @@
+04 noviembre 2013 --------------------------------
+verificar campo nota en tabla sis_grupos
+insertar registro de la funcion sis_grupos:
+INSERT INTO `sis_funciones` (`id_func`, `id_padre`, `texto_icono`, `url`, `orden`, `activa`,`icono32`,`icono48`,`descrip_func`) VALUES 
+('00421', '00042', 'GRUPOS DE USUARIOS','../sis_grupos/sis_grupos.php', 2, true,'00421.png','00421.png','');
+--------------------------------------------------
