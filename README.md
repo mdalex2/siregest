@@ -1,2 +1,2 @@
 # SIREGEST
-Sistema de registros estudiantiles
+Sistema de registros estudiantiles php + apache + mysql
